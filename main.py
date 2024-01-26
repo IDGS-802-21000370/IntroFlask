@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("layout2.html")
 
 
 @app.route("/alumnos")
@@ -72,7 +72,9 @@ def multi():
     if request.method=="POST":
         num1 = request.form.get("n1")
         num2 = request.form.get("n2")
-        return"<h1> El resultado es: {}</h1>".format(int(num1) * int(num2))    
+        return "<h1> El resultado es: {}</h1>".format(int(num1) + int(num2))
+    
+
     
      
 
