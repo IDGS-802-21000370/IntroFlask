@@ -1,13 +1,26 @@
 {% extends 'layout2.html'%}
 
 {% block content%}
-    <form action="/resultado" method="POST">
-        <label>N1:</label>
-        <input type="text" name="n1"/>
-        <label>N2:</label>
-        <input type="text" name="n2"/>
-        <input type="submit"/>
-    </form>
+<div class="col"><div class="container">
+    <div class="row">
+        <div class="col">
+            <form  action="/resultado" method="POST">
+                <label>Ingresa el número 1:</label>
+                <input type="text" name="n1"><br>
+                <label>Ingresa el número 2:</label>
+                <input type="text" name="n2"><br>
+                    <input type="radio" name="elegir" value="Sumar" checked> Suma<br>
+                    <input type="radio" name="elegir" value="Restar"> Resta<br>
+                    <input type="radio" name="elegir" value="Multiplicar"> Multiplicación<br>
+                    <input type="radio" name="elegir" value="Dividir"> División<br>
+                    <input type="submit" value="Calcular">
+            </form>
+        </div>
+        <div class="col">
+            <h4>El resultado de la operacion es: {{ resultado }} </h4>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
     
